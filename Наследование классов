@@ -1,0 +1,36 @@
+class Car:
+    price = 1000000
+
+    def __init__(self):
+        self.money = 0
+        self.horsepower = 0
+
+    def __str__(self):
+        return ('{} price {} horsepower {}'.format
+                (self.__class__.__name__, self.price, self.horsepower))
+
+    def horse_powers(self):
+        pass
+
+
+class Nissan(Car):
+    price = 1200000
+
+    def horse_powers(self):
+        self.horsepower = 200
+
+
+class Kia(Car):
+    price = 1100000
+
+    def horse_powers(self):
+        self.horsepower = 150
+
+
+n = Nissan()
+n.horse_powers()
+print(n)
+
+k = Kia()
+k.horse_powers()
+print(k)
