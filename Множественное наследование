@@ -22,6 +22,6 @@ class Nissan(Car, Vehicle):
 
 
 nissan = Nissan()
-nissan.horse_powers()
 print('Тип транспорта:', Nissan.vehicle_type)
+nissan.horse_powers()
 print('Цена:', Nissan.price)
