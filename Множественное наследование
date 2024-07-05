@@ -9,7 +9,6 @@ class Car:
         self.ls = 0
 
     def horse_powers(self):
-        self.ls = 100
         print("Л.с.:", self.ls)
 
 
