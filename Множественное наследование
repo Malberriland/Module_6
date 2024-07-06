@@ -5,11 +5,11 @@ class Vehicle:
 class Car:
     price = 1000000
 
-    def __init__(self):
-        self.ls = 0
+    def __init__(self, ls):
+        self.ls = ls
 
     def horse_powers(self):
-        print("Л.с.:", self.ls)
+        return self.ls
 
 
 class Nissan(Car, Vehicle):
@@ -17,11 +17,14 @@ class Nissan(Car, Vehicle):
     vehicle_type = "Nissan"
 
     def horse_powers(self):
-        self.ls = 200
-        print("Л.с.:", self.ls)
+        pass
+
+    def __str__(self):
+        return ('Л.с.: {} '.format
+                (self.ls))
 
 
-nissan = Nissan()
+nissan = Nissan(200)
 print('Тип транспорта:', Nissan.vehicle_type)
-nissan.horse_powers()
 print('Цена:', Nissan.price)
+print(nissan)
